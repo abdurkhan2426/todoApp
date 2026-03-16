@@ -14,10 +14,7 @@ function CompletedTasks(){
     const dispatch = useDispatch();
     const [taskRemoveBanner, setTaskRemoveBanner] = useState(false)
 
-    console.log(todoArray)
-
     function deleteTask(id){
-        console.log('delete')
         dispatch(deleteTodo(id))
         setTaskRemoveBanner(!taskRemoveBanner)
 
@@ -30,12 +27,6 @@ function CompletedTasks(){
         dispatch(checkboxTodo(id))
 
 }
-
-  var incompleteTaskArray = []
-  var completeTaskArray = []
-  var array = []
-
- 
 
     if(todoArray.length === 0){
         return (

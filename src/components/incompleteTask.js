@@ -13,10 +13,7 @@ function IncompleteTasks(){
     const dispatch = useDispatch();
     const [taskRemoveBanner, setTaskRemoveBanner] = useState(false)
 
-    console.log(todoArray)
-
     function deleteTask(id){
-        console.log('delete')
         dispatch(deleteTodo(id))
         setTaskRemoveBanner(!taskRemoveBanner)
 
@@ -31,12 +28,6 @@ function IncompleteTasks(){
 }
 
   let incompleteTaskArray = []
-  var completeTaskArray = []
-  var array = []
-
-
-
-    
 
     if(incompleteTaskArray.length === 0){
         return (
